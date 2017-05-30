@@ -5,7 +5,7 @@ function Quiz(questions){
 }
 
 Quiz.prototype.getQuestionIndex = function(){
-	this.questions[this.questionIndex];
+	return this.questions[this.questionIndex];
 };	
 
 Quiz.prototype.isEnded = function(){

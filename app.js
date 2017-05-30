@@ -1,3 +1,22 @@
+function populate(){
+
+	if(quiz.isEnded()){
+
+	}else{
+		var el = document.getElementById("question");
+			el.innerHTML = quiz.getQuestionIndex().text;
+
+		var choices = quiz.getQuestionIndex().choices;
+
+			for(var i=0; i<choices.length; i++){
+				var elem = document.getElementById("choice"+ i);
+				elem.innerHTML = choices[i];
+			}	
+	}
+
+}
+
+
 var questions = [
 	new Question("Which of the following is not object oriented ?",["Java", "C", "C++", "PYTHON"], "b"),
 	new Question("Which is the detective based cartoon ?", ["Scooby Doo", "Jerry", "Phines", "Pokemon" ], "a"),
@@ -7,18 +26,6 @@ var questions = [
 ];
 
 var quiz = new Quiz(questions);
-
-
-function populate(){
-
-	if(quiz.isEnded()){
-
-	}else{
-		var el = document.getElementById("question");
-			el.innerHTML = quiz.getQuestionIndex().text;
-	}
-
-}
 
 
 populate();
